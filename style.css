@@ -1,0 +1,266 @@
+/*
+Theme Name: Murrumbella
+Theme URI: https://github.com/Bobby2067/murrumbella-wordpress-theme
+Author: KATACHI Studio
+Description: Premium WordPress theme for luxury property marketing
+Version: 1.0.0
+Requires at least: 6.0
+Requires PHP: 8.0
+Text Domain: murrumbella
+License: GPL v2 or later
+*/
+
+:root {
+  --sage-grey: #8e9186;
+  --river-blue: #5a7684;
+  --clay-bark: #cbb7a2;
+  --charcoal-ridge: #3e3e3e;
+  --copper-accent: #b56a4d;
+  --murrumbella-cream: #f8f6f3;
+  --murrumbella-mist: #ebe9e5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  color: var(--charcoal-ridge);
+  background-color: var(--murrumbella-cream);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  color: var(--sage-grey);
+}
+
+a {
+  color: var(--copper-accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--charcoal-ridge);
+}
+
+.container-custom {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(248, 246, 243, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(203, 183, 162, 0.2);
+  padding: 1.5rem 2rem;
+}
+
+.site-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--charcoal-ridge);
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--sage-grey);
+}
+
+nav a:hover {
+  color: var(--river-blue);
+}
+
+.hero-section {
+  margin-top: 80px;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+  position: relative;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.hero-content h1 {
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: white;
+  color: var(--charcoal-ridge);
+}
+
+.btn-primary:hover {
+  background-color: var(--murrumbella-cream);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--sage-grey);
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  border: 1px solid rgba(203, 183, 162, 0.2);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.site-footer {
+  background-color: var(--charcoal-ridge);
+  color: white;
+  padding: 3rem 2rem;
+  margin-top: 5rem;
+}
+
+.site-footer p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 1rem 1.5rem;
+  }
+
+  section {
+    padding: 3rem 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
+  }
+}
